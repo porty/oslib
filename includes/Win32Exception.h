@@ -29,6 +29,11 @@ namespace OS { namespace Win
 		 */
 		int getErrorCode() const	{ return errorCode; };
 
+		/**
+		 * Actually return the error message.
+		 */
+		virtual const char * what() const { return errorString; }
+
 	protected:
 		/**
 		 * Create a new Win32ExceptionHelper, specifying the error code.
