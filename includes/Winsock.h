@@ -1,21 +1,29 @@
 #pragma once
 
-#include <WinSock2.h>
-#pragma comment (lib, "ws2_32.lib")
+#ifdef _WIN32
 
-#include "Win32Exception.h"
+#pragma comment (lib, "ws2_32.lib")
 
 namespace OS { namespace Win
 {
+	/**
+	 * Used to automatically initialise and clean-up Winsock.
+	 *
+	 * @author Shorty
+	 */
 	class Winsock
 	{
 	public:
-		Winsock()
-		{
-			WSAData data;
-			WSAStartup(MAKEWORD(2, 2), &data);
-		}
+		/**
+		 * Initialise Winsock.
+		 */
+		Winsock();
 
-		~Winsock() { WSACleanup(); }
+		/**
+		 * Clean up winsock
+		 */
+		~Winsock();
 	};
 } }
+
+#endif
