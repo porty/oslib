@@ -80,25 +80,21 @@
     <ClInclude Include="..\..\includes\FileSystem.h" />
     <ClInclude Include="..\..\includes\FindHandle.h" />
     <ClInclude Include="..\..\includes\HandleCloser.h" />
-    <ClInclude Include="..\..\includes\IPAddress.h" />
     <ClInclude Include="..\..\includes\LinuxException.h" />
     <ClInclude Include="..\..\includes\Logger.h" />
     <ClInclude Include="..\..\includes\macros.h" />
     <ClInclude Include="..\..\includes\Thread.h" />
     <ClInclude Include="..\..\includes\WaitObject.h" />
     <ClInclude Include="..\..\includes\Win32Exception.h" />
-    <ClInclude Include="..\..\includes\Winsock.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\AtomicInt32.cpp" />
     <ClCompile Include="..\..\FileSystem.cpp" />
-    <ClCompile Include="..\..\IPAddress.cpp" />
     <ClCompile Include="..\..\LinuxException.cpp" />
     <ClCompile Include="..\..\Logger.cpp" />
     <ClCompile Include="..\..\Thread.cpp" />
     <ClCompile Include="..\..\WaitObject.cpp" />
     <ClCompile Include="..\..\Win32Exception.cpp" />
-    <ClCompile Include="..\..\Winsock.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
