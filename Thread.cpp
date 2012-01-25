@@ -1,6 +1,5 @@
 #include "Thread.h"
 #include "WaitObject.h"
-#include "UavException.h"
 
 #ifdef _WIN32
 #include "Win32Exception.h"
