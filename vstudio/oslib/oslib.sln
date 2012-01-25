@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C++ Express 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "oslib", "oslib.vcxproj", "{4D3562A9-8D9F-49BE-976B-FE3569ECD37D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "..\test\test.vcxproj", "{36C40AD0-F33E-45EE-AE92-86447B76A808}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4D3562A9-8D9F-49BE-976B-FE3569ECD37D} = {4D3562A9-8D9F-49BE-976B-FE3569ECD37D}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -13,6 +18,10 @@ Global
 		{4D3562A9-8D9F-49BE-976B-FE3569ECD37D}.Debug|Win32.Build.0 = Debug|Win32
 		{4D3562A9-8D9F-49BE-976B-FE3569ECD37D}.Release|Win32.ActiveCfg = Release|Win32
 		{4D3562A9-8D9F-49BE-976B-FE3569ECD37D}.Release|Win32.Build.0 = Release|Win32
+		{36C40AD0-F33E-45EE-AE92-86447B76A808}.Debug|Win32.ActiveCfg = Debug|Win32
+		{36C40AD0-F33E-45EE-AE92-86447B76A808}.Debug|Win32.Build.0 = Debug|Win32
+		{36C40AD0-F33E-45EE-AE92-86447B76A808}.Release|Win32.ActiveCfg = Release|Win32
+		{36C40AD0-F33E-45EE-AE92-86447B76A808}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
