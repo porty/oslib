@@ -20,7 +20,7 @@ namespace OS
 		 *
 		 * @param milliseconds The number of milliseconds to sleep for
 		 */
-		void sleep(int milliseconds);
+		static void sleep(int milliseconds);
 	public: // non-static
 		/**
 		 * Create a new thread.
