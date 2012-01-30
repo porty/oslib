@@ -1,12 +1,18 @@
 #include <iostream>
 
-#include "AtomicInt32.h"
-
-using namespace OS;
+#include "AtomicInt32Test.h"
+#include "FileSystemTest.h"
 
 int main()
 {
-	AtomicInt32 i;
-	std::cout << ++i << "\n";
-	std::cout << ++i << "\n";
+	try
+	{
+		//testAtomicInt32();
+		testFileSystem();
+	}
+	catch (const std::exception & ex)
+	{
+		std::cerr << ex.what() << std::endl;
+		return -1;
+	}
 }
