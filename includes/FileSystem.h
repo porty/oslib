@@ -36,6 +36,8 @@ namespace OS
 		 */
 		static std::string nameOnly(const std::string & path);
 
+		static std::string getCurrentDirectory();
+
 	private:
 		static const std::string directorySeparator;
 

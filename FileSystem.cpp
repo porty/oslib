@@ -118,3 +118,18 @@ std::string FileSystem::nameOnly(const std::string & path)
 		return path.substr(index + 1);
 	}
 }
+
+std::string FileSystem::getCurrentDirectory()
+{
+#ifdef _WIN32
+	char buffer[MAX_PATH + 1];
+	int length = GetCurrentDirectory(sizeof(buffer), buffer);
+	if (length == 0)
+	{
+		throw Win32Exception();
+	}
+	return buffer;
+#else
+	// TODO
+#endif
+}
