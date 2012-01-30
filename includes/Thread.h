@@ -73,6 +73,7 @@ namespace OS
 		 */
 		handle_t handle;
 
+	protected:
 		/**
 		 * The method the implementing class must implement. This is run when a
 		 * thread starts.
