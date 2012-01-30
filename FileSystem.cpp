@@ -73,7 +73,12 @@ void FileSystem::getFileListing(const std::string & directory, const
 bool FileSystem::fileExists(const std::string & fileName)
 {
 #ifdef _WIN32
-	return GetFileAttributes(fileName.c_str()) != INVALID_FILE_ATTRIBUTES;
+	DWORD attribs = GetFileAttributes(fileName.c_str());
+	if (attribs == INVALID_FILE_ATTRIBUTES)
+	{
+		return false;
+	}
+	return (attribs & FILE_ATTRIBUTE_DIRECTORY) == 0;
 #else
 	struct stat statInfo;
 	stat(fileName.c_str(), &statInfo);
