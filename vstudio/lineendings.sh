@@ -1,4 +1,7 @@
 #!/bin/bash
 
-dos2unix ../*.cpp
-dos2unix ../includes/*.h
+DIRNAME=$(cd $(dirname $0) && pwd -P)
+
+#echo Dir name is ${DIRNAME}
+
+find "$DIRNAME/.." \( -iname "*.cpp" -o -iname "*.h" \) -exec dos2unix {} \;
