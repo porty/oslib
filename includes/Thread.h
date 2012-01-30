@@ -1,10 +1,12 @@
 #pragma once
 
-#include <stdint.h>
-
 namespace OS
 {
-
+	/**
+	 * Extend this class to do things in a seperate thread of execution.
+	 *
+	 * @author Shorty
+	 */
 	class Thread
 	{
 	public: // static
@@ -47,6 +49,14 @@ namespace OS
 
 	private:
 		/**
+		 * The handle type.
+		 */
+#ifdef _WIN32
+		typedef void * handle_t;
+#else
+		typedef unsigned long handle_t;
+#endif
+		/**
 		 * The thread entry point function.
 		 *
 		 * @param obj The Thread object to run
@@ -61,11 +71,7 @@ namespace OS
 		/**
 		 * The handle of the thread.
 		 */
-#ifdef _WIN32
-		void * handle;
-#else
-		unsigned long handle;
-#endif
+		handle_t handle;
 
 		/**
 		 * The method the implementing class must implement. This is run when a
