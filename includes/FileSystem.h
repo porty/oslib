@@ -24,6 +24,8 @@ namespace OS
 
 		static bool fileExists(const std::string & name);
 
+		static bool directoryExists(const std::string & name);
+
 		static const std::string & getDirectorySeparator()	{ return directorySeparator; }
 
 		/**

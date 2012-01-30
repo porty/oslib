@@ -81,6 +81,20 @@ bool FileSystem::fileExists(const std::string & fileName)
 #endif
 }
 
+bool FileSystem::directoryExists(const std::string & dirName)
+{
+#ifdef _WIN32
+	DWORD attribs = GetFileAttributes(dirName.c_str());
+	if (attribs == INVALID_FILE_ATTRIBUTES)
+	{
+		return false;
+	}
+	return (attribs & FILE_ATTRIBUTE_DIRECTORY) != 0;
+#else
+
+#endif
+}
+
 std::string FileSystem::nameOnly(const std::string & path)
 {
 	std::string::size_type index = path.find_last_of(directorySeparator[0]);
