@@ -24,6 +24,9 @@
     <ClCompile Include="FileSystemTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SplitStringTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AtomicInt32Test.h">
@@ -32,5 +35,11 @@
     <ClInclude Include="FileSystemTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SplitStringTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="runtest.sh" />
   </ItemGroup>
 </Project>

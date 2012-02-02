@@ -83,10 +83,15 @@
     <ClCompile Include="AtomicInt32Test.cpp" />
     <ClCompile Include="FileSystemTest.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SplitStringTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AtomicInt32Test.h" />
     <ClInclude Include="FileSystemTest.h" />
+    <ClInclude Include="SplitStringTest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="runtest.sh" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
