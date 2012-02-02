@@ -45,6 +45,9 @@
     <ClInclude Include="..\..\includes\AtomicInt32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\includes\UnionCast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\includes\SplitString.h">
       <Filter>Header Files</Filter>
     </ClInclude>

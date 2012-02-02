@@ -85,6 +85,7 @@
     <ClInclude Include="..\..\includes\macros.h" />
     <ClInclude Include="..\..\includes\SplitString.h" />
     <ClInclude Include="..\..\includes\Thread.h" />
+    <ClInclude Include="..\..\includes\UnionCast.h" />
     <ClInclude Include="..\..\includes\WaitObject.h" />
     <ClInclude Include="..\..\includes\Win32Exception.h" />
   </ItemGroup>
