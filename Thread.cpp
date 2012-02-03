@@ -5,6 +5,7 @@
 #include "Win32Exception.h"
 #include <Windows.h>
 #else
+#include "LinuxException.h"
 #include <pthread.h>
 #include <unistd.h>
 #endif
@@ -59,7 +60,7 @@ void Thread::start()
 	int retval = pthread_create(&handle, NULL, (startroutine_t) Thread::entryPoint, (void *) this);
 	if (retval != 0)
 	{
-		throw UavException("Failed to create thread - pthread_create() returned non-zero value");
+		throw LinuxException("Failed to create thread - pthread_create() returned non-zero value");
 	}
 #endif
 }
