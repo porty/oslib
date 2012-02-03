@@ -65,8 +65,8 @@ void FileSystem::getFileListing(const std::string & directory, const
 	}
 	while (FindNextFile(handle.get(), &findData));
 #else
-	//not implemented
-	// TODO
+	// TODO not implemented
+	#pragma message("Not implemented")
 #endif
 }
 
@@ -132,6 +132,8 @@ std::string FileSystem::getCurrentDirectory()
 	}
 	return buffer;
 #else
-	// TODO
+	// TODO not implemented
+	#pragma message("Not implemented")
+	return ".";
 #endif
 }
