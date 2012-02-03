@@ -96,7 +96,9 @@ bool FileSystem::directoryExists(const std::string & dirName)
 	}
 	return (attribs & FILE_ATTRIBUTE_DIRECTORY) != 0;
 #else
-
+	struct stat statInfo;
+	stat(dirName.c_str(), &statInfo);
+	return S_ISDIR(statInfo.st_mode);
 #endif
 }
 
