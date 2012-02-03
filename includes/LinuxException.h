@@ -2,8 +2,7 @@
 
 #ifndef _WIN32
 
-#include "UavException.h"
-
+#include <exception>
 #include <string>
 
 /**
@@ -11,7 +10,7 @@
  *
  * @author Shorty
  */
-class LinuxException: public UavException
+class LinuxException: public std::exception
 {
 public: // static stuff
 	static std::string makeMessage();
@@ -21,7 +20,7 @@ public:
 	/**
 	 * Create a new LinuxException. Will take the error code from the system.
 	 */
-	LinuxException(): UavException(makeMessage()) {};
+	LinuxException(): message(makeMessage()) {}
 
 	/**
 	 * Create a new LinuxException. Will take the error code from the system,
@@ -29,7 +28,9 @@ public:
 	 *
 	 * @param extraInfo Extra information about the error
 	 */
-	LinuxException(const char * const extraInfo): UavException(makeMessage(extraInfo)) {};
+	LinuxException(const char * const extraInfo): message(makeMessage(extraInfo)) {}
+
+	~LinuxException() throw() {}
 
 	/**
 	 * The Linux error code.
@@ -37,6 +38,8 @@ public:
 	 * @return the linux error code
 	 */
 	int getErrorCode() const;
+
+	virtual const char * what() const throw() { return message.c_str(); }
 private:
 	std::string message;
 };
